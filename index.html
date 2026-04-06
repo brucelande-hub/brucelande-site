@@ -331,8 +331,113 @@
             border-radius: 8px;
         }
 
+        /* Venues */
+        .venues { background: var(--color-white); }
+
+        .venue-featured {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 2.5rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .venue-featured-photo {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .venue-featured-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .venue-featured-text h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--color-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .venue-featured-text .venue-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.8rem;
+        }
+
+        .venue-featured-text p {
+            color: var(--color-muted);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .venue-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .venue-card {
+            background: var(--color-warm);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: transform 0.3s;
+        }
+
+        .venue-card:hover { transform: translateY(-4px); }
+
+        .venue-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .venue-card .venue-card-body {
+            padding: 1.2rem;
+        }
+
+        .venue-card h4 {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            color: var(--color-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .venue-card .venue-location {
+            font-size: 0.85rem;
+            color: var(--color-muted);
+        }
+
+        .venue-card .venue-caption {
+            font-size: 0.85rem;
+            color: var(--color-muted);
+            font-style: italic;
+            margin-top: 0.4rem;
+            line-height: 1.5;
+        }
+
+        .venue-card-no-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 180px;
+            background: var(--color-dark);
+            color: var(--color-accent);
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 1rem;
+        }
+
         /* Photo Gallery */
-        .gallery { background: var(--color-white); }
+        .gallery { background: var(--color-warm); }
 
         .gallery-grid {
             display: grid;
@@ -500,6 +605,8 @@
 
             .testimonial-grid { grid-template-columns: 1fr; }
             .about-layout { grid-template-columns: 1fr; }
+            .venue-featured { grid-template-columns: 1fr; }
+            .venue-grid { grid-template-columns: repeat(2, 1fr); }
             .video-grid { grid-template-columns: 1fr; }
             .gallery-grid { grid-template-columns: 1fr 1fr; }
             .contact-layout { grid-template-columns: 1fr; }
@@ -509,6 +616,7 @@
 
         @media (max-width: 480px) {
             .hero h1 { font-size: 2.2rem; }
+            .venue-grid { grid-template-columns: 1fr; }
             .gallery-grid { grid-template-columns: 1fr; }
             .social-grid { grid-template-columns: 1fr; }
         }
@@ -525,6 +633,7 @@
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#venues">Venues</a></li>
         <li><a href="#videos">Videos</a></li>
         <li><a href="#gallery">Photos</a></li>
         <li><a href="#social">Connect</a></li>
@@ -622,6 +731,63 @@
             <div class="timeline-item">
                 <div class="timeline-year">Now</div>
                 <div class="timeline-desc">Live performances at clubs, coffee shops, and private parties along the coast of North Carolina</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Venues -->
+<section class="venues" id="venues">
+    <div class="container">
+        <div class="section-header">
+            <h2>Where I Play</h2>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Featured Venue: The Scoop -->
+        <div class="venue-featured">
+            <div class="venue-featured-photo">
+                <img src="images/scoop-sign.jpg" alt="The Scoop - Live Music sign with Bruce Lande" loading="lazy">
+            </div>
+            <div class="venue-featured-text">
+                <div class="venue-label">Home Base &mdash; Summer 2025 &amp; 2026</div>
+                <h3>The Scoop</h3>
+                <p>Fresh bagels, homemade ice cream, and live music on the coast. I play here nearly every day during the summer season &mdash; it's become my musical home on Holden Beach.</p>
+                <p>Families, vacationers, and locals gather on the patio for an evening of classic covers, cold drinks, and good times. If you're anywhere near Holden Beach between May and September, come find me here.</p>
+            </div>
+        </div>
+
+        <!-- Previous Venues -->
+        <div class="venue-grid">
+            <div class="venue-card">
+                <img src="images/duffers.png" alt="Duffers Bar & Grill" loading="lazy">
+                <div class="venue-card-body">
+                    <h4>Duffer's Bar &amp; Grill</h4>
+                    <div class="venue-location">Shallotte, NC</div>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="images/ocean-blvd-coffee.png" alt="Ocean Boulevard Coffee" loading="lazy">
+                <div class="venue-card-body">
+                    <h4>Ocean Blvd Coffee</h4>
+                    <div class="venue-location">Holden Beach, NC</div>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="images/surf-club.png" alt="The Surf Club bar" loading="lazy">
+                <div class="venue-card-body">
+                    <h4>The Surf Club</h4>
+                    <div class="venue-location">Wilmington, NC</div>
+                    <div class="venue-caption">Private events at one of Wilmington's premier clubs</div>
+                </div>
+            </div>
+            <div class="venue-card">
+                <img src="images/landfall.png" alt="Country Club of Landfall clubhouse" loading="lazy">
+                <div class="venue-card-body">
+                    <h4>Country Club of Landfall</h4>
+                    <div class="venue-location">Wilmington, NC</div>
+                    <div class="venue-caption">Private member events at Landfall's clubhouse</div>
+                </div>
             </div>
         </div>
     </div>
