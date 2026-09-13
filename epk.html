@@ -551,10 +551,12 @@
         .booking-item a, .booking-item .value {
             color: var(--color-white);
             text-decoration: none;
-            font-size: 1rem;
+            font-size: clamp(0.78rem, 2.3vw, 1rem);
             font-weight: 600;
             display: block;
-            word-break: break-word;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .booking-item a:hover { color: var(--color-accent); }
