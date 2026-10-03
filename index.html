@@ -358,6 +358,47 @@
             border-radius: 8px;
         }
 
+        .featured-video {
+            max-width: 800px;
+            margin: 0 auto 3.5rem;
+            text-align: center;
+        }
+
+        .featured-video-badge {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        .featured-video .video-wrapper {
+            box-shadow: 0 10px 40px rgba(0,0,0,0.18);
+        }
+
+        .featured-video-caption {
+            margin-top: 1.2rem;
+            font-size: 1.05rem;
+            color: var(--color-text);
+        }
+
+        .featured-video-caption a {
+            color: var(--color-accent);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .more-videos-label {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--color-muted);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
         /* Venues */
         .venues { background: var(--color-white); }
 
@@ -894,6 +935,14 @@
             <h2>Watch &amp; Listen</h2>
             <div class="divider"></div>
         </div>
+        <div class="featured-video">
+            <div class="featured-video-badge">🎬 Official Promo</div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/e7CgXAE4rFw" title="Bruce Lande - Live Acoustic Guitarist for Events" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p class="featured-video-caption">Private clubs, corporate events, weddings &amp; restaurants across Eastern North Carolina. Call or text <a href="tel:+19108808960">(910) 880-8960</a> to book.</p>
+        </div>
+        <p class="more-videos-label">More Performances</p>
         <div class="video-grid">
             <div class="video-card">
                 <h3>Wonderful Tonight</h3>

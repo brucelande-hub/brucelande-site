@@ -240,6 +240,54 @@
         /* Bio */
         .bio { background: var(--color-white); }
 
+        .promo-video { background: var(--color-warm); }
+
+        .featured-video {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .featured-video-badge {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.18);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .featured-video-caption {
+            margin-top: 1.2rem;
+            font-size: 1.05rem;
+            color: var(--color-text);
+        }
+
+        .featured-video-caption a {
+            color: var(--color-accent);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
         .bio-layout {
             display: grid;
             grid-template-columns: 1fr 1.4fr;
@@ -668,6 +716,19 @@
         <div class="fact-item">
             <div class="fact-number">1,000+</div>
             <div class="fact-label">Songs in Repertoire</div>
+        </div>
+    </div>
+</section>
+
+<!-- Promo Video -->
+<section class="promo-video">
+    <div class="container">
+        <div class="featured-video">
+            <div class="featured-video-badge">🎬 Watch the Promo</div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/e7CgXAE4rFw" title="Bruce Lande - Live Acoustic Guitarist for Events" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p class="featured-video-caption">Private clubs, corporate events, weddings &amp; restaurants across Eastern North Carolina. Call or text <a href="tel:+19108808960">(910) 880-8960</a> to book.</p>
         </div>
     </div>
 </section>
